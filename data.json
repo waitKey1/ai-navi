@@ -8,6 +8,13 @@
                 "description": "抖音旗下AI助手",
                 "img": "doubao.jpg",
                 "link": "https://doubao.com"
+            },
+            {
+                "id": "102",
+                "name": "Deepseek",
+                "description": "深度求索推出的开源大模型",
+                "img": "deepseek.jpg",
+                "link": "https://deepseek.com"
             }
         ]
     },
