@@ -83,7 +83,7 @@ key={card.id}
 >
     <div className="h-full w-full bg-slate-50 rounded-lg flex flex-row flex-wrap items-center">
       <div className="w-2/5 flex items-center justify-center">
-      <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/${card.img}`} alt={card.name} width={60} height={60} className="rounded-lg"></Image>
+      <Image src={`/navi/img/${card.img}`} alt={card.name} width={60} height={60} className="rounded-lg"></Image>
      
     
       </div>
