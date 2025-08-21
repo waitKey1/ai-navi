@@ -33,7 +33,7 @@ const cardData:Card | undefined = rawData.find((section: Section) =>
     <div className="w-full min-h-screen flex bg-white justify-center">
       <div className="flex flex-col w-7/8 mt-8">
       <div className="flex flex-row items-center justify-center gap-2">
-        <Image src={`/img/${cardData?.img}`} alt={cardData?.name || ''} width={100} height={100} className="rounded-lg"/>
+        <Image src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/img/${cardData?.img}`} alt={cardData?.name || ''} width={100} height={100} className="rounded-lg"/>
 
         
         
