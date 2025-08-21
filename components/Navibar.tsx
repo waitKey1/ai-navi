@@ -14,11 +14,11 @@ import PsychologyAltIcon from '@mui/icons-material/PsychologyAlt';
 
 import React from 'react'
 import { useRouter } from 'next/navigation';
-type Props = {}
 
 
 
-const Navibar = (props: Props) => {
+
+const Navibar = () => {
 const router = useRouter();
 
 

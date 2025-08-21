@@ -6,26 +6,41 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 
-type Props = {}
 
-const Page = (props: Props) => {
+const Page = () => {
   const params=useParams()
   const card_id=params.card_id
- let cardData=rawData.find((section:any)=>section.cards.some((card:any)=>card.id===card_id))?.cards.find((card:any)=>card.id===card_id)
+interface Card {
+  id: string;
+  name: string;
+  description: string;
+  img: string;
+  link: string;
+}
+
+interface Section {
+  title: string;
+  cards: Card[];
+}
+
+const cardData:Card | undefined = rawData.find((section: Section) => 
+
+  section.cards.some((card: Card) => card.id === card_id)
+)?.cards.find((card: Card) => card.id === card_id)
  
 
   return (
     <div className="w-full min-h-screen flex bg-white justify-center">
       <div className="flex flex-col w-7/8 mt-8">
       <div className="flex flex-row items-center justify-center gap-2">
-        <Image src={`/img/${cardData?.img}`} alt={cardData?.name} width={100} height={100} className="rounded-lg"/>
+        <Image src={`/img/${cardData?.img}`} alt={cardData?.name || ''} width={100} height={100} className="rounded-lg"/>
 
         
         
       <div className="flex flex-col justify-center items-start">
 
 <p className="text-2xl font-bold">{cardData?.name}</p>
-        <Link href={cardData?.link} className="text-sm bg-blue-500 rounded-md text-white mt-3 p-2">链接直达</Link>
+        <Link href={cardData?.link || ''} className="text-sm bg-blue-500 rounded-md text-white mt-3 p-2">链接直达</Link>
 
 
       </div>
